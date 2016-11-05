@@ -1,0 +1,31 @@
+/* import components styles */
+@import url("components/navbar.css");
+@import url("components/container.css");
+@import url("components/buttons.css");
+@import url("components/footer.css");
+
+/* import templates styles */
+@import url("templates/homepage.css");
+@import url("templates/useraccount.css");
+@import url("templates/profilepage.css");
+
+
+
+html {
+	font-family: 'Lato';
+  	position: relative;
+  	min-height: 100%;
+}
+
+body {
+	background-color: #313131;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:focus,
+a:visted {
+	outline: none;
+}

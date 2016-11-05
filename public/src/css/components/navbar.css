@@ -1,0 +1,255 @@
+.navbar {
+	border-bottom-width: 0;
+	height: 65px;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute;
+	font-size: 2.4045rem;
+	font-weight: 600;
+	line-height: 35px;
+}
+
+.navbar-default .nav {
+	margin-right: 16px;
+}
+
+.navbar-default .navbar-form {
+	margin: 16px 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+	font-size: 1.5545rem;
+	font-weight: 600;
+	line-height: 15px;
+	margin: 10px 0;
+}
+
+.menu-borderbutton {
+	border-radius: 0px;
+	height: 45px;
+	line-height: 10px;
+}
+
+.inner-addon {
+  	position: relative;
+}
+
+.inner-addon .form-control {
+	border: none;
+	width: 250px;
+	height: 35px;
+	margin-left: 0px;
+}
+
+.inner-addon .form-control:focus {
+	box-shadow: none;
+}
+
+.inner-addon .glyphicon {
+  	position: absolute;
+  	padding: 8px;
+  	pointer-events: none;
+}
+
+.right-addon .glyphicon {
+	right: 0px;
+}
+
+.right-addon input {
+	padding-right: 30px;
+}
+
+
+
+@media (min-width: 768px) {
+	.navbar-default .navbar-collapse {
+		display: inline-block;
+		width: 50%;
+		float: left;
+	}
+
+	.navbar-btn {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.navbar-btn {
+		width: 55px;
+		height: 45px;
+	}
+
+	.navbar-default .navbar-btn.pull-right {
+		margin-right: 16px;
+	}
+
+	.navbar-default .navbar-btn.pull-left {
+		margin-left: 16px;
+	}
+
+	.inner-addon,
+	.navbar-default .navbar-form {
+		border: none;
+	}
+
+	.inner-addon .form-control {
+		width: 100%;
+		margin-left: 0;
+		border: 0;
+	}
+
+	.collapsing,
+	.in {
+		border: none;
+	}
+
+	.menu-borderbutton {
+		border: none;
+	}
+}
+
+
+
+.light-navbar.navbar {
+	background-color: #FFFFFF;
+	box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .24);
+}
+
+.light-navbar.navbar-default .navbar-brand,
+.light-navbar.navbar-default .navbar-brand:hover {
+	color: #333333;
+}
+
+.light-navbar.navbar-default .navbar-nav > li > a {
+	color: #333333;
+}
+
+.light-navbar.navbar-default .navbar-brand:visited,
+.light-navbar.navbar-default .navbar-nav > li > a:visited,
+.light-navbar.navbar-default .navbar-nav > li > a:focus {
+	color: #333333;
+}
+
+.light-navbar.navbar-default .navbar-nav > li > a:hover {
+	color: white!important;
+	background-color: #333333;
+}
+
+.light-navbar .navbar-btn {
+	color: black;
+	background-color: white;
+}
+
+.light-navbar .collapsing,
+.light-navbar .in {
+	background-color: #FFFFFF;
+	box-shadow: 0 4px 5px -4px rgba(0, 0, 0, .24);
+}
+
+.light-navbar .collapsing ul li a,
+.light-navbar .in ul li a {
+	color: #000000!important;
+}
+
+.light-navbar .menu-borderbutton {
+	border: 1px solid #333333;
+}
+
+.light-navbar .inner-addon .form-control {
+	background-color: rgba(167, 167, 167, 0.4);
+}
+
+.light-navbar .inner-addon .form-control:focus {
+	color: #FFFFFF;
+	background-color: #333333;
+}
+
+.light-navbar .inner-addon .glyphicon {
+  	color: #A7A7A7;
+}
+
+
+
+@media (max-width: 768px) {
+	.light-navbar .menu-borderbutton {
+		border: none;
+		height: 37px;
+	}
+}
+
+
+
+.dark-navbar.navbar {
+	background-color: #000000;
+}
+
+.dark-navbar.navbar-default .navbar-brand,
+.dark-navbar.navbar-default .navbar-brand:hover {
+	color: white;
+}
+
+.dark-navbar.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+
+.dark-navbar.navbar-default .navbar-brand:visited,
+.dark-navbar.navbar-default .navbar-nav > li > a:visited,
+.dark-navbar.navbar-default .navbar-nav > li > a:focus {
+	color: white;
+}
+
+.dark-navbar.navbar-default .navbar-nav > li > a:hover {
+	color: black;
+	background-color: white;
+}
+
+.dark-navbar .menu-borderbutton {
+	border: 1px solid white;
+}
+
+.dark-navbar .inner-addon .form-control {
+	background-color: rgba(167, 167, 167, 0.4);
+}
+
+.dark-navbar .inner-addon .form-control:focus {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.dark-navbar .inner-addon .glyphicon {
+  	color: #A7A7A7;
+}
+
+
+
+@media (min-width: 768px) {
+	.dark-navbar .navbar {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+@media (max-width: 768px) {
+	.dark-navbar .navbar-default .navbar-nav > li > a:hover {
+		color: #000000!important;
+		background-color: #FFFFFF;
+	}
+
+	.dark-navbar .navbar-btn {
+		color: white;
+		background-color: black;
+	}
+
+	.dark-navbar .collapsing,
+	.dark-navbar .in {
+		background-color: #000000;
+	}
+
+	.dark-navbar .collapsing ul li a,
+	.dark-navbar .in ul li a {
+		color: #FFFFFF!important;
+	}
+}

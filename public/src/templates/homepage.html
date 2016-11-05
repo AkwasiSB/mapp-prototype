@@ -1,0 +1,67 @@
+<div class="homepage">
+	<!-- navigation bar -->
+    <nav class="dark-navbar navbar navbar-default navbar-fixed-top">
+	  	<div class="container-fluid">
+		    <div class="navbar-header">
+		    	<button type="button" class="btn btn-default navbar-btn pull-right" data-toggle="collapse" data-target="#menu-navbar-collapse">
+		    		<i class="fa fa-bars fa-lg"></i>
+		    	</button>
+
+		    	<button type="button" class="btn btn-default navbar-btn search-toggle pull-left" data-toggle="collapse" data-target="#input-navbar-collapse">
+		    		<i class="fa fa-search fa-lg"></i>
+		    	</button>
+
+		      	<a class="navbar-brand" href="">Mapp<sup>&reg;</sup></a>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="input-navbar-collapse">
+		    	<form class="navbar-form navbar-left">
+		    		<div class="inner-addon right-addon">
+				      	<i class="glyphicon glyphicon-search"></i>
+				      	<input type="text" class="form-control" placeholder="Search for companies" />
+				    </div>
+		    	</form>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="menu-navbar-collapse">
+		    	<ul class="nav navbar-nav navbar-right">
+		    		<li><a href="">Pricing</a></li>
+		    		<li><a href="">Support</a></li>
+		    		<li><a class="menu-borderbutton" href="" ng-click="signIn()">Sign in</a></li>
+		    	</ul>
+		    </div>
+	  	</div>
+	</nav>
+
+	<!-- main page content -->
+	<div class="container main-content">
+		<h1 class="text-center">A 3D map that captures real state of a project and helps nuclear decommissioning</h1>
+
+		<div class="row row-grid button-pack text-center">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<button class="btn btn-lg color-blue" ng-click="createCompany()">Create Company</button>
+			</div>
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<button class="btn btn-lg color-green" ng-click="signUp()">Sign Up</button>
+			</div>
+
+			<div class="col-xs-12 text-center homepage-label">
+				Are you already using Mapp? 
+				<a class="" ng-click="signIn()">Sign in</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer bar -->
+	<footer class="dark-footer footer">
+		<span class="company-text">&copy; 2016 Mapp<sup>&reg;</sup></span>
+
+		<div class="contacts">
+			<span>Contact Us</span>
+			<a href=""><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+		</div>
+	</footer>
+</div>

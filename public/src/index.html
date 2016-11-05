@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mappApp">
+
+	<head>
+		<meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Mapp captures the real state of projects." />
+		<meta name="author" content="Mapp" />
+
+        <!-- jquery-ui stylesheet -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+
+		<!-- bootstrap stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+        <!-- jquery-file-upload stylesheet -->
+        <link rel="stylesheet" href="https://blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload.css" />
+        <link rel="stylesheet" href="https://blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload-ui.css" />
+        <noscript><link rel="stylesheet" href="https://blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="https://blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload-ui-noscript.css"></noscript>
+
+        <!-- ngDialog stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.4.0/css/ngDialog.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.4.0/css/ngDialog-theme-default.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.4.0/css/ngDialog-theme-plain.min.css" />
+
+        <!-- fonts and icons -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+        <!-- app stylesheet -->
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- page icon -->
+		<link id="favicon" rel="shortcut icon" href="" sizes="16x16 32x32 48x48 256x256" type="image/png" />
+
+		<!-- page title -->
+		<title>Mapp</title>
+	</head>
+
+	<body>
+
+		<!-- Angular container for all pages views -->
+		<div ng-view=""></div>
+
+	</body>
+
+	<!-- angularjs script files -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+
+    <!-- jquery script files -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- bootstrap script files -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- jquery-file-upload script files -->
+    <script type="text/javascript" src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-ui.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/blueimp/jQuery-File-Upload/master/js/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
+    <script type="text/javascript" src="https://blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-validate.js"></script>
+
+    <!-- angular-svg-roundprogress script file -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-svg-round-progressbar/0.4.4/roundProgress.min.js"></script>
+
+    <!-- ngDialog script file -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.4.0/js/ngDialog.min.js"></script>
+
+    <!-- my app js files -->
+    <script type="text/javascript" src="js/directives/mapp-upload.js"></script>
+    <script type="text/javascript" src="js/filters/mapp-filters.js"></script>
+    <script type="text/javascript" src="js/controllers/homepage-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/useraccount-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/profilepage-controller.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</html>

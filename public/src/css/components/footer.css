@@ -1,0 +1,59 @@
+.footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 15px;
+}
+
+.footer > .contacts {
+	float: right;
+}
+
+.footer > .contacts > span,
+.footer > .contacts > a > .fa {
+	margin-left: 5px;
+	font-weight: 500;
+}
+
+
+
+@media (min-width: 768px) {
+	.footer > span,
+    .footer > .contacts > span,
+	.footer > .contacts > a > .fa {
+		margin-left: 20px;
+	}
+}
+
+
+
+.dark-footer.footer {
+	color: #999999;
+	background-color: #2C2C2C;
+}
+
+.dark-footer.footer > .contacts > span,
+.dark-footer.footer > .contacts > a > .fa {
+	color: #999999;
+}
+
+.dark-footer.footer > .contacts > a:hover > .fa {
+	color: #CCCCCC;
+}
+
+.grey-footer.footer {
+	color: #999999;
+	background-color: #F9F9F9;
+	box-shadow: 0 -2px 2px -2px rgba(0, 0, 0, .24);
+}
+
+.grey-footer.footer > .contacts > span,
+.grey-footer.footer > .contacts > a > .fa {
+	color: #999999;
+}
+
+.grey-footer.footer > .contacts > a:hover > .fa {
+	color: #333333;
+}

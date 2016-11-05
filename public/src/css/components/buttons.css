@@ -1,0 +1,49 @@
+.btn.btn-lg {
+ 	font-size: 18px;
+ 	line-height: 1.3333333;
+ 	border-radius: 6px;
+ 	padding: 10px 20px;
+ 	font-weight: bold;
+}
+
+.color-blue,
+.color-blue:focus {
+	background-color: #193E6A;
+	color: white;
+	border-radius: 3px;
+	width: 180px;
+	height: 50px;
+}
+
+.color-blue:hover {
+	background-color: #15355B;
+	color: white;
+}
+
+.color-green,
+.color-green:focus {
+	background-color: #27AE60;
+	color: white;
+	border-radius: 3px;
+	width: 180px;
+	height: 50px;
+}
+
+.color-green:hover {
+	background-color: #219552;
+	color: white;
+}
+
+.color-turqouise,
+.color-turqouise:focus {
+	background-color: #008693;
+	color: white;
+	border-radius: 3px;
+	width: 180px;
+	height: 50px;
+}
+
+.color-turqouise:hover {
+	background-color: #008693;
+	color: white;
+}

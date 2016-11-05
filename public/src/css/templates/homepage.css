@@ -1,0 +1,87 @@
+.homepage {
+	position: relative;
+	display: inline-block;
+	background-image: url('../../images/mapp-img2.jpeg');
+	background-size: cover;
+	width: 100%;
+    height: 100%;
+}
+
+.homepage .main-content {
+	color: white;
+    height: 100%;
+	margin-bottom: 109px;
+}
+
+.homepage .main-content h1 {
+	padding: 130px 0;
+}
+
+.row.button-pack [class*="col-"] + [class*="col-"] {
+    margin-top: 15px;
+}
+
+.button-pack {
+	background-color: rgba(256, 256, 256, .3);
+	margin: 0 auto;
+	padding: 50px 0;
+	border-radius: 7px;
+}
+
+.homepage-label {
+	color: white;
+	font-size: 16px;
+ 	line-height: 1.3333333;
+ 	font-weight: bold;
+ 	padding-top: 10px;
+}
+
+.homepage-label a {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+
+@media (min-width: 1200px) {
+    .row.button-pack  [class*="col-lg-"] + [class*="col-lg-"] {
+        margin-top: 0;
+    }
+
+    .button-pack {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .row.button-pack  [class*="col-md-"] + [class*="col-md-"] {
+        margin-top: 0;
+    }
+
+    .button-pack {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+	.row.button-pack  [class*="col-sm-"] + [class*="col-sm-"] {
+        margin-top: 0px;
+    }
+
+    .button-pack {
+        width: 60%;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+	.button-pack {
+        width: 70%;
+    }
+}
+
+@media (max-width: 550px) {
+    .button-pack {
+        width: 100%;
+    }
+}

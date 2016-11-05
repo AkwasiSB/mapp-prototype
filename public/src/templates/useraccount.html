@@ -1,0 +1,144 @@
+<div class="uac-page">
+	<!-- navigation bar -->
+    <nav class="light-navbar navbar navbar-default navbar-fixed-top">
+	  	<div class="container-fluid">
+		    <div class="navbar-header">
+		    	<button type="button" class="btn btn-default navbar-btn pull-right" data-toggle="collapse" data-target="#menu-navbar-collapse">
+		    		<i class="fa fa-bars fa-lg"></i>
+		    	</button>
+
+		    	<button type="button" class="btn btn-default navbar-btn search-toggle pull-left" data-toggle="collapse" data-target="#input-navbar-collapse">
+		    		<i class="fa fa-search fa-lg"></i>
+		    	</button>
+
+		      	<a class="navbar-brand" href="">Mapp<sup>&reg;</sup></a>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="input-navbar-collapse">
+		    	<form class="navbar-form navbar-left">
+		    		<div class="inner-addon right-addon">
+				      	<i class="glyphicon glyphicon-search"></i>
+				      	<input type="text" class="form-control" placeholder="Search for companies" />
+				    </div>
+		    	</form>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="menu-navbar-collapse">
+		    	<ul class="nav navbar-nav navbar-right">
+		    		<li><a href="">Pricing</a></li>
+		    		<li><a href="">Support</a></li>
+		    		<li><a class="menu-borderbutton" href="" ng-click="signIn()">Sign in</a></li>
+		    	</ul>
+		    </div>
+	  	</div>
+	</nav>
+
+	<!-- main page content -->
+	<div class="container center-block signup-container" ng-show="!hideSignUp">
+		<div class="form-container">
+			<form class="form-horizontal form-center" name="signupForm" novalidate role="form">
+				<div class="form-group text-center">
+					<h2>Create Account</h2>
+				</div>
+
+				<div class="form-group">
+					<label for="username" class="control-label">Username</label>
+					<input class="form-control" type="text" name="username" ng-model="user.name" ng-pattern="/^[0-9a-zA-Z\-_\s]+$/" required>
+
+					<div ng-messages="signupForm.username.$error" ng-if="signupForm.username.$touched">
+						<div ng-message="required">This field is required</div>
+						<div ng-message="pattern">This field expects a real name</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="control-label">Email</label>
+					<input class="form-control" type="email" name="email" ng-model="user.email" ng-pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required>
+
+					<div ng-messages="signupForm.email.$error" ng-if="signupForm.email.$touched">
+						<div ng-message="required">This field is required</div>
+						<div ng-message="pattern">Invalid email address</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="password" class="control-label">Password</label>
+					<input class="form-control" type="text" name="password" ng-pattern="/^[0-9a-zA-Z]+$/" ng-minlength="5" ng-maxlength="20" ng-model="user.password" required>
+
+					<div ng-messages="signupForm.password.$error" ng-if="signupForm.password.$touched">
+						<div ng-message="required">This field is required</div>
+						<div ng-message="pattern">This field must contain alphabets and numbers only</div>
+						<div ng-message="minlength">This password is too short</div>
+						<div ng-message="maxlength">This password has exceeded it's max length</div>
+					</div>
+				</div>
+
+				<div class="form-group mapp-tospp">
+					By clicking on Join now you agree to Mapp 
+					<a href="#">Terms of Service</a>
+					 and
+					<a href="#">Privacy Policy</a>
+				</div>
+
+				<div class="form-group text-center">
+					<p class="lead">
+						<a class="btn btn-lg color-turqouise" href="" ng-click="gotoProfile()">Join now</a>
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<p class="uac-label">
+			Already on Mapp?
+			<a href="" ng-click="signIn()">Sign in</a>
+		</p>
+	</div>
+
+	<!-- main page content -->
+	<div class="container center-block signin-container" ng-show="hideSignUp">
+		<div class="create-label" ng-show="createLabel">Please sign in before proceeding to create your profile</div>
+
+		<div class="form-container">
+			<form class="form-horizontal form-center" name="signinForm" novalidate role="form">
+				<div class="form-group text-center">
+					<h3>Sign in to your account</h3>
+				</div>
+
+				<div class="form-group">
+					<label for="username" class="control-label">Username or Email</label>
+					<input class="form-control" type="text" name="username" ng-model="user.name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="password" class="control-label">Password</label>
+					<input class="form-control" type="text" name="password" ng-pattern="/^[0-9a-zA-Z]+$/" ng-model="user.password" required>
+				</div>
+
+				<div class="form-group mapp-tospp"></div>
+
+				<div class="form-group text-center">
+					<p class="lead">
+						<a class="btn btn-lg color-turqouise" href="" ng-click="gotoProfile()">Log In</a>
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<p class="uac-label">
+			Not part of Mapp yet?
+			<a href="" ng-click="signUp()">Join now</a>
+		</p>
+	</div>
+
+	<!-- footer bar -->
+	<footer class="grey-footer footer">
+		<span class="company-text">&copy; 2016 Mapp<sup>&reg;</sup></span>
+
+		<div class="contacts">
+			<span>Contact Us</span>
+			<a href=""><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+		</div>
+	</footer>
+</div>

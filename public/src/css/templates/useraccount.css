@@ -1,0 +1,109 @@
+.uac-page {
+	position: relative;
+	background-color: #F9F9F9;
+    height: 100vh;
+}
+
+.uac-page .container {
+	width: 60%;
+    height: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.signup-container {
+	padding-top: 110px;
+	padding-bottom: 50px;
+}
+
+.create-label {
+	height: 80px
+	font-size: 2.8434rem;
+	font-weight: 600;
+	text-align: center;
+	background-color: #008693;
+	color: white;
+	padding: 10px;
+	margin: 20px 0;
+	border-radius: 5px;
+}
+
+.uac-page .container .form-container {
+	background-color: white;
+	width: 100%;
+	border-radius: 4px;
+	margin-bottom: 30px;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	-webkit-box-shadow: 0 1px 6px -4px black;
+	-moz-box-shadow: 0 1px 6px -4px black;
+	box-shadow: 0 1px 6px -4px black;
+}
+
+.uac-page .container .form-center {
+	width: 60%;
+}
+
+.uac-page .control-label {
+	margin-bottom: 6px;
+}
+
+div[ng-message] {
+	color: #008693;
+}
+
+.mapp-tospp {
+	color: #888888;
+	text-align: center;
+}
+
+.mapp-tospp a {
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.uac-label {
+	font-size: 16px;
+ 	line-height: 1.3333333;
+ 	font-weight: bold;
+}
+
+.uac-label a {
+	color: #008693;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+	.uac-page .container {
+		padding-top: 100px;
+		padding-bottom: 40px;
+	}
+}
+
+@media (min-width: 550px) and (max-width: 850px) {
+	.uac-page .container {
+		width: 90%;
+	}
+
+	.uac-page .container .form-center {
+		width: 70%;
+	}
+}
+
+@media (max-width: 550px) {
+	.uac-page .container {
+		width: 100%;
+	}
+
+	.uac-page .container .form-center {
+		width: 85%;
+	}
+}

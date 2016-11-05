@@ -1,0 +1,136 @@
+<div class="profile-page">
+	<!-- navigation bar -->
+    <nav class="light-navbar navbar navbar-default navbar-fixed-top">
+	  	<div class="container-fluid">
+		    <div class="navbar-header">
+		    	<button type="button" class="btn btn-default navbar-btn pull-right" data-toggle="collapse" data-target="" ng-click="showUploadModal()">
+		    		<i class="fa fa-upload fa-lg"></i>
+		    	</button>
+
+		      	<a class="navbar-brand" href="">Mapp<sup>&reg;</sup></a>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="menu-navbar-collapse">
+		    	<ul class="nav navbar-nav navbar-right">
+		    		<li><a class="menu-borderbutton" href="" ng-click="showUploadModal()">Upload</a></li>
+		    	</ul>
+		    </div>
+	  	</div>
+	</nav>
+
+	<div class="notification">
+		<span class="notifytext"></span>
+	</div>
+
+	<!-- main page content -->
+	<div class="container text-center">
+		<div class="row" ng-repeat="model in pcModels" ng-if="$index % 4 === 0">
+	        <a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="$index < pcModels.length" ng-click="loadPCModel(pcModels[$index].url)">
+	            <img ng-src="{{pcModels[$index].thumbnail}}" width="240px" height="240px" />
+	            <p>{{pcModels[$index].title}}</p>
+	        </a>
+
+	        <a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="$index + 1 < pcModels.length" ng-click="loadPCModel(pcModels[$index + 1].url)">
+	            <img ng-src="{{pcModels[$index + 1].thumbnail}}" width="240px" height="240px" />
+	            <p>{{pcModels[$index + 1].title}}</p>
+	        </a>
+
+	        <a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="$index + 2 < pcModels.length" ng-click="loadPCModel(pcModels[$index + 2].url)">
+	            <img ng-src="{{pcModels[$index + 2].thumbnail}}" width="240px" height="240px" />
+	            <p>{{pcModels[$index + 2].title}}</p>
+	        </a>
+
+	        <a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="$index + 3 < pcModels.length" ng-click="loadPCModel(pcModels[$index + 3].url)">
+	            <img ng-src="{{pcModels[$index + 3].thumbnail}}" width="240px" height="240px" />
+	            <p>{{pcModels[$index + 3].title}}</p>
+	        </a>
+	    </div>
+	</div>
+
+	<!-- footer bar -->
+	<footer class="grey-footer footer">
+		<span class="company-text">&copy; 2016 Mapp<sup>&reg;</sup></span>
+
+		<div class="contacts">
+			<span>Contact Us</span>
+			<a href=""><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+		</div>
+	</footer>
+</div>
+
+
+
+<script type="text/ng-template" id="templateId">
+	<div class="text-center">
+	    <div ng-class="{showLoader: startUpload}" ng-show="!startUpload && !startProc">
+	    	<h3>Please choose the cloud point file for upload.</h3>
+
+	    	<span style="margin: 30px 10px;">The file type supported are: las, laz, xyz, ply, e57, dxf, dwg, jpg</span>
+
+			<div class="row fileupload-buttonbar" style="margin-top: 30px;">
+			    <div class="col-lg-7">
+			        <!-- The fileinput-button span is used to style the file input field as button -->
+			        <span class="btn btn-success fileinput-button" ng-class="{disabled: disabled}">
+			            <i class="glyphicon glyphicon-upload"></i>
+
+			            <span>Upload</span>
+
+			            <!-- mapp-upload directive for uploading 3D data -->
+			            <input type="file" name="pcfile" upload-url="http://localhost:3000/upload" mapp-upload />
+			        </span>
+			    </div>
+		    </div>
+		</div>
+
+    	<!-- This container is shown when upload starts -->
+	    <div ng-class="{showLoader: startUpload}" ng-show="startUpload && !startProc">
+	    	<h3>Uploading file. Please wait...</h3>
+
+		    <!-- Upload progressbar container -->
+		    <div class="progress-wrapper">
+	            <div class="progress ng-cloak" ng-style="getStyle()">{{cProgress}}%</div>
+
+		    	<round-progress max="100" current="cProgress" color="#45CCCE" bgcolor="#EAEAEA" radius="100" semi="false" rounded="true" stroke="10" clockwise="true" responsive="false" duration="500" animation="easeInOutQuart" animation-delay="0">
+		    		<svg>
+		                <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+		                    <stop offset="5%"  stop-color="green"/>
+		                    <stop offset="95%" stop-color="gold"/>
+		                </linearGradient>
+	               	</svg>
+		    	</round-progress>
+		    </div>
+
+			<div class="row fileupload-buttonbar">
+			    <div class="col-lg-7">
+			        <!-- The fileinput-button span is used to style the file input field as button -->
+			        <button type="button" class="btn btn-warning cancel" ng-click="cancelUpload()">
+			            <i class="glyphicon glyphicon-ban-circle"></i>
+
+			            <span>Cancel</span>
+			        </button>
+			    </div>
+		    </div>
+		</div>
+
+    	<!-- This container is shown when upload starts -->
+	    <div ng-class="{showLoader: startUpload}" ng-show="startProc && !startUpload">
+	    	<h3>Processing file. Please wait...</h3>
+
+		    <!-- Processing progressbar container -->
+		    <div class="progress-wrapper">
+	            <div class="progress ng-cloak" ng-style="getStyle()">{{cTimer | time}}</div>
+
+		    	<round-progress max="100" current="cLoop" color="#45CCCE" bgcolor="#EAEAEA" radius="100" semi="false" rounded="true" stroke="10" clockwise="true" responsive="false" duration="500" animation="easeInOutQuart" animation-delay="0">
+		    		<svg>
+		                <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+		                    <stop offset="5%"  stop-color="green"/>
+		                    <stop offset="95%" stop-color="gold"/>
+		                </linearGradient>
+	               	</svg>
+		    	</round-progress>
+		    </div>
+		</div>
+	</div>
+</script>
