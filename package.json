@@ -1,0 +1,35 @@
+{
+  "name": "mapp-prototype",
+  "version": "1.0.0",
+  "description": "A map that captures real estate projects",
+  "main": "server.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkwasiSB/mapp-prototype.git"
+  },
+  "keywords": [
+    "mapp",
+    "map",
+    "real-estate",
+    "projects"
+  ],
+  "author": "Akwasi Sefa-Boakye",
+  "bugs": {
+    "url": "https://github.com/AkwasiSB/mapp-prototype/issues"
+  },
+  "homepage": "https://github.com/AkwasiSB/mapp-prototype#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap-sass": "^3.3.7",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "multer": "^1.2.0",
+    "shelljs": "^0.7.5"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "^2.2.1",
+    "nodemon": "^1.11.0"
+  }
+}
