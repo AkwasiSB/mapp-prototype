@@ -40,7 +40,7 @@
 
 .inner-addon .form-control {
 	border: none;
-	width: 250px;
+	width: 300px;
 	height: 35px;
 	margin-left: 0px;
 }
@@ -49,18 +49,23 @@
 	box-shadow: none;
 }
 
-.inner-addon .glyphicon {
+.inner-addon .fa {
   	position: absolute;
-  	padding: 8px;
+  	padding: 10px;
   	pointer-events: none;
 }
 
-.right-addon .glyphicon {
-	right: 0px;
+.inner-addon input {
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
-.right-addon input {
-	padding-right: 30px;
+.fa.left-addon {
+	left: 0px;
+}
+
+.fa.right-addon {
+	right: 0px;
 }
 
 
@@ -168,7 +173,7 @@
 	background-color: #333333;
 }
 
-.light-navbar .inner-addon .glyphicon {
+.light-navbar .inner-addon .fa {
   	color: #A7A7A7;
 }
 
@@ -220,7 +225,7 @@
 	background-color: #FFFFFF;
 }
 
-.dark-navbar .inner-addon .glyphicon {
+.dark-navbar .inner-addon .fa {
   	color: #A7A7A7;
 }
 
@@ -251,5 +256,60 @@
 	.dark-navbar .collapsing ul li a,
 	.dark-navbar .in ul li a {
 		color: #FFFFFF!important;
+	}
+}
+
+
+
+.transparent-navbar.navbar {
+	background-color: rgba(256, 256, 256, 0);
+}
+
+.transparent-navbar .navbar-btn {
+	color: black;
+}
+
+.transparent-navbar .collapsing,
+.transparent-navbar .in {
+	box-shadow: 0 4px 5px -4px rgba(0, 0, 0, .24);
+}
+
+.transparent-navbar .collapsing ul li a,
+.transparent-navbar .in ul li a {
+	color: #000!important;
+}
+
+.transparent-navbar .inner-addon {
+	padding: 0;
+}
+
+.transparent-navbar .inner-addon .form-control {
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 -1px 0px rgba(0, 0, 0, .02);
+	width: 430px;
+	height: 55px;
+}
+
+.transparent-navbar .inner-addon .form-control:focus {
+	color: #000;
+	background-color: #FFF;
+}
+
+.transparent-navbar .inner-addon input {
+	padding-left: 65px;
+	padding-right: 65px;
+}
+
+.transparent-navbar .inner-addon .fa {
+  	color: #000;
+  	padding: 19px 17px;
+}
+
+
+
+@media (max-width: 768px) {
+	.transparent-navbar .menu-borderbutton {
+		border: none;
+		height: 37px;
 	}
 }

@@ -19,8 +19,8 @@
 }
 
 .create-label {
-	height: 80px
-	font-size: 2.8434rem;
+	height: 40px;
+	font-size: 1.5434rem;
 	font-weight: 600;
 	text-align: center;
 	background-color: #008693;
@@ -39,7 +39,6 @@
   	justify-content: center;
   	align-items: center;
   	-webkit-box-shadow: 0 1px 6px -4px black;
-	-moz-box-shadow: 0 1px 6px -4px black;
 	box-shadow: 0 1px 6px -4px black;
 }
 

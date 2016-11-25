@@ -26,6 +26,6 @@ a {
 }
 
 a:focus,
-a:visted {
+a:visited {
 	outline: none;
 }

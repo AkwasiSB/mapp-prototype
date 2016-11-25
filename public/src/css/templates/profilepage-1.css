@@ -1,0 +1,65 @@
+.profile-page {
+	position: relative;
+	background-color: #F9F9F9;
+    height: 100vh;
+}
+
+.notification {
+	display: none;
+	color: white;
+	font-size: 14px;
+	font-weight: 600;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	top: 50px;
+	text-align: center;
+	z-index: 9999;
+}
+
+.notifytext {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+
+.profile-page .container {
+	height: 100vh;
+	padding-top: 76px;
+	padding-bottom: 45px;
+}
+
+.uploader-template {
+	padding: 0px 15px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+
+.showLabel ~ .fileupload-buttonbar {
+	margin-top: 120px;
+}
+
+.showLoader ~ .fileupload-buttonbar {
+	margin-top: 50px;
+}
+
+.progress-wrapper{
+    position: relative;
+    margin: 20px auto;
+    font-size: 40px;
+}
+
+.progress{
+    position: absolute;
+    color: #bbb;
+    font-weight: 100;
+    line-height: 1;
+}
+
+
+
+@media (min-width: 768px) {
+	.profile-page .navbar-default .navbar-collapse {
+		float: right;
+	}
+}

@@ -1,136 +1,272 @@
 <div class="profile-page">
 	<!-- navigation bar -->
-    <nav class="light-navbar navbar navbar-default navbar-fixed-top">
+    <nav class="transparent-navbar navbar navbar-default navbar-fixed-top">
 	  	<div class="container-fluid">
 		    <div class="navbar-header">
-		    	<button type="button" class="btn btn-default navbar-btn pull-right" data-toggle="collapse" data-target="" ng-click="showUploadModal()">
-		    		<i class="fa fa-upload fa-lg"></i>
-		    	</button>
-
-		      	<a class="navbar-brand" href="">Mapp<sup>&reg;</sup></a>
 		    </div>
 
-		    <div class="collapse navbar-collapse" id="menu-navbar-collapse">
-		    	<ul class="nav navbar-nav navbar-right">
-		    		<li><a class="menu-borderbutton" href="" ng-click="showUploadModal()">Upload</a></li>
-		    	</ul>
-		    </div>
+		    <form class="navbar-form navbar-left">
+		    	<div class="inner-addon">
+				    <i class="fa fa-navicon fa-lg left-addon" ng-click="showMenu()"></i>
+				    <input type="text" class="form-control" placeholder="Search Mapp" />
+				    <i class="fa fa-search fa-lg right-addon"></i>
+				</div>
+		   	</form>
+
+		    <ul class="nav navbar-nav navbar-right">
+	            	<li>
+	            		<a href="" class="notification">
+	            			<span class="notify-bubble">
+	            				<i class="fa fa-bell"></i>
+	            			</span>
+	            			<span class="badge">3</span>
+	            		</a>
+	            	</li>
+
+	            	<li class="dropdown">
+	            		<a href="" class="tools dropdown-toggle" data-toggle="dropdown">
+	            			<span class="fa fa-th fa-lg"></span>
+	            		</a>
+			            <ul class="dropdown-menu">
+			            	<li class="header">Tools</li>
+
+			            	<li class="separator"></li>
+
+			                <li>
+			                	<div id="myCarousel" class="carousel slide">
+									<div class="carousel-inner" role="listbox">
+									    <div class="item active">
+									    	<table style="width: 100%;">
+												<tr>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #34485E; width: 45px; height: 45px;">
+															<img src="../images/dropper.png" width="30" height="30" style="position: relative; left: -13px; top: -3px;" />
+														</button>
+													</td>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #34485E; width: 45px; height: 45px;"></button>
+													</td>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #EA6842; width: 45px; height: 45px;">
+															<img src="../images/info.png" width="12" height="20" style="position: relative; left: -5px; top: -2px;" />
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #34485E; width: 45px; height: 45px;">
+															<img src="../images/compass.png" width="25" height="20" style="position: relative; left: -11px; top: -3px;" />
+														</button>
+													</td>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #34485E; width: 45px; height: 45px;"></button>
+													</td>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #EA6842; width: 45px; height: 45px;">
+															<img src="../images/settings.png" width="25" height="25" style="position: relative; left: -11px; top: -1px;" />
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #34485E; width: 45px; height: 45px;">
+															<img src="../images/rectangular-select.png" width="35" height="30" style="position: relative; left: -16px; top: -3px;" />
+														</button>
+													</td>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #34485E; width: 45px; height: 45px;"></button>
+													</td>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #009561; width: 45px; height: 45px;">
+															<img src="../images/camera.png" width="25" height="20" style="position: relative; left: -11px; top: -1px;" />
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #34485E; width: 45px; height: 45px;">
+															<img src="../images/funnel.png" width="15" height="21" style="position: relative; left: -6px; top: -1px;" />
+														</button>
+													</td>
+													<td>
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #34485E; width: 45px; height: 45px;">
+															<img src="../images/cursor.png" width="15" height="17" style="position: relative; left: -6px; top: -1px;" />
+														</button>
+													</td>
+													<td rowspan="2">
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #009561; width: 45px; height: 100px;">
+															<img src="../images/crop.png" width="25" height="25" style="position: relative; left: -11px; top: -1px;" />
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<button type="button" class="btn btn-default btn-lg" style="background-color: #156DD6; width: 100px; height: 45px;">
+															<img src="../images/save.png" width="25" height="25" style="position: relative; left: -1px; top: -1px;" />
+														</button>
+													</td>
+												</tr>
+											</table>
+										</div>
+
+									    <div class="item">Slide-1</div>
+
+									    <div class="item">Slide-2</div>
+
+									    <div class="item">Slide-3</div>
+									</div>
+
+									<ol class="carousel-indicators">
+									    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+									    <li data-target="#myCarousel" data-slide-to="1"></li>
+									    <li data-target="#myCarousel" data-slide-to="2"></li>
+									    <li data-target="#myCarousel" data-slide-to="3"></li>
+									</ol>
+								</div>
+							</li>
+			            </ul>
+	            	</li>
+
+	            	<li>
+	            		<a href="" class="user"></a>
+	            	</li>
+	         </ul>
 	  	</div>
 	</nav>
 
-	<div class="notification">
-		<span class="notifytext"></span>
-	</div>
-
 	<!-- main page content -->
-	<div class="container text-center">
-		<div class="row" ng-repeat="model in pcModels" ng-if="$index % 4 === 0">
-	        <a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="$index < pcModels.length" ng-click="loadPCModel(pcModels[$index].url)">
-	            <img ng-src="{{pcModels[$index].thumbnail}}" width="240px" height="240px" />
-	            <p>{{pcModels[$index].title}}</p>
-	        </a>
+	<div class="container">
+		<div id="gmap"></div>
 
-	        <a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="$index + 1 < pcModels.length" ng-click="loadPCModel(pcModels[$index + 1].url)">
-	            <img ng-src="{{pcModels[$index + 1].thumbnail}}" width="240px" height="240px" />
-	            <p>{{pcModels[$index + 1].title}}</p>
-	        </a>
+		<div class="settings-background" ng-click="hideMenu()">
+			<ul class="settings">
+				<li class="settings-header">
+					Mapp Dashboard
+					<i class="fa fa-angle-left fa-lg" ng-click="hideMenu()"></i>
+				</li>
 
-	        <a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="$index + 2 < pcModels.length" ng-click="loadPCModel(pcModels[$index + 2].url)">
-	            <img ng-src="{{pcModels[$index + 2].thumbnail}}" width="240px" height="240px" />
-	            <p>{{pcModels[$index + 2].title}}</p>
-	        </a>
+				<li class="divider"></li>
 
-	        <a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-if="$index + 3 < pcModels.length" ng-click="loadPCModel(pcModels[$index + 3].url)">
-	            <img ng-src="{{pcModels[$index + 3].thumbnail}}" width="240px" height="240px" />
-	            <p>{{pcModels[$index + 3].title}}</p>
-	        </a>
-	    </div>
-	</div>
+				<li class="settings-content">
+					<table style="width: 100%;">
+						<tr>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" style="background-color: #D9284C;">
+									<div style=""></div>
+								</button>
+							</td>
+							<td rowspan="2">
+								<button type="button" class="btn btn-default btn-lg" style="background-color: #DACA84; height: 120px;">
+									<img src="../images/myplaces.png" width="65" height="55" />
+									<span style="display: block; font-size: 1.2854rem; font-weight: 500; color: #fff; position: relative; bottom: -20px;">My Places</span>
+								</button>
+							</td>
+							<td rowspan="4">
+								<button type="button" class="btn btn-default btn-lg iot" style="background-color: #A2B736; height: 240px;">
+									<img src="../images/sensor.png" width="40" height="30" />
+									<img src="../images/chip.png" width="40" height="30" style="display: block; margin-top: 17px; position: relative; left: 27px;" />
+									<span style="display: block; font-size: 1.2754rem; font-weight: 500; color: #fff; position: relative; bottom: -70px;">Internet of Things</span>
+								</button>
+							</td>
+						</tr>
 
-	<!-- footer bar -->
-	<footer class="grey-footer footer">
-		<span class="company-text">&copy; 2016 Mapp<sup>&reg;</sup></span>
+						<tr>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" style="background-color: #EA6842;">
+									<img src="../images/clip.png" width="25" height="25" style="position: relative; top: -2px;" />
+									<span style="display: block; font-size: 1.2554rem; font-weight: 500; color: #fff; position: relative; bottom: 0;">Share Mapp</span>
+								</button>
+							</td>
+						</tr>
 
-		<div class="contacts">
-			<span>Contact Us</span>
-			<a href=""><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
-			<a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-			<a href=""><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+						<tr>
+							<td rowspan="4">
+								<button type="button" class="btn btn-default btn-lg explore" style="background-color: #EB7938; height: 240px;">
+									<img src="../images/explore.png" width="80" height="110" style="position: relative; left: -20px; bottom: -70px;" />
+									<span style="display: block; font-size: 1.3254rem; font-weight: 500; color: #fff; position: relative; top: -160px;">Explore</span>
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" style="background-color: #770BB1;">
+									<img src="../images/controlpanel.png" width="30" height="20" style="position: relative; top: -7px;" />
+									<span style="display: block; font-size: 1.2554rem; font-weight: 500; color: #fff; position: relative; bottom: 0;">Control Panel</span>
+								</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" style="background-color: #770BB1;">
+									<img src="../images/myprofile.png" width="25" height="25" style="position: relative; top: -7px;" />
+									<span style="display: block; font-size: 1.2554rem; font-weight: 500; color: #fff; position: relative; bottom: 0;">My Profile</span>
+								</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td rowspan="2">
+								<button type="button" class="btn btn-default btn-lg ctn" style="background-color: #1673D1; height: 120px;">
+									<img src="../images/createnew.png" width="40" height="40" />
+									<span style="display: block; font-size: 1.2554rem; font-weight: 500; color: #fff; position: relative; bottom: -28px;">Create New</span>
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" style="background-color: #009561;">
+									<img src="../images/email.png" width="30" height="25" style="position: relative; top: -2px;" />
+									<span style="display: block; font-size: 1.2554rem; font-weight: 500; color: #fff; position: relative; bottom: 0;">Email us</span>
+								</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" style="background-color: #97B53C;">
+									<img src="../images/logout.png" width="30" height="25" style="position: relative; top: -2px;" />
+									<span style="display: block; font-size: 1.2554rem; font-weight: 500; color: #fff; position: relative; bottom: 0;">Log out</span>
+								</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td rowspan="3" colspan="3">
+								<button type="button" class="btn btn-default btn-lg com" style="background-color: #1C9A5A; height: 180px;"></button>
+							</td>
+						</tr>
+
+						<tr></tr>
+
+						<tr></tr>
+
+						<tr>
+							<td>
+								<button type="button" class="btn btn-default btn-xs" style="font-size: 1.2843rem; background: none; height: 30px; padding: 0; border: 1px solid #000; border-radius: 7px;">
+									Take a tour
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default btn-xs" style="font-size: 1.2843rem; background: none; height: 30px; padding: 0; border: 1px solid #000; border-radius: 7px;">
+									Tips and help
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default btn-xs" style="font-size: 1.2843rem; background: none; height: 30px; padding: 0; border: 1px solid #000; border-radius: 7px;">
+									Feedback
+								</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="3">
+								<span style="font-size: 1.2043rem; color: #777; padding: 0 15px; position: relative; left: 12%;">
+									&copy; Sensat 2017 All Rights Reserved <a href="" style="font-size: 1.2043rem; color: #777; text-decoration: underline;">View Terms</a>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</li>
+			</ul>
 		</div>
-	</footer>
+
+		<a class="brand" style="color: white; text-decoration: none;" href="">Mapp<sup>&reg;</sup></a>
+	</div>
 </div>
-
-
-
-<script type="text/ng-template" id="templateId">
-	<div class="text-center">
-	    <div ng-class="{showLoader: startUpload}" ng-show="!startUpload && !startProc">
-	    	<h3>Please choose the cloud point file for upload.</h3>
-
-	    	<span style="margin: 30px 10px;">The file type supported are: las, laz, xyz, ply, e57, dxf, dwg, jpg</span>
-
-			<div class="row fileupload-buttonbar" style="margin-top: 30px;">
-			    <div class="col-lg-7">
-			        <!-- The fileinput-button span is used to style the file input field as button -->
-			        <span class="btn btn-success fileinput-button" ng-class="{disabled: disabled}">
-			            <i class="glyphicon glyphicon-upload"></i>
-
-			            <span>Upload</span>
-
-			            <!-- mapp-upload directive for uploading 3D data -->
-			            <input type="file" name="pcfile" upload-url="http://localhost:3000/upload" mapp-upload />
-			        </span>
-			    </div>
-		    </div>
-		</div>
-
-    	<!-- This container is shown when upload starts -->
-	    <div ng-class="{showLoader: startUpload}" ng-show="startUpload && !startProc">
-	    	<h3>Uploading file. Please wait...</h3>
-
-		    <!-- Upload progressbar container -->
-		    <div class="progress-wrapper">
-	            <div class="progress ng-cloak" ng-style="getStyle()">{{cProgress}}%</div>
-
-		    	<round-progress max="100" current="cProgress" color="#45CCCE" bgcolor="#EAEAEA" radius="100" semi="false" rounded="true" stroke="10" clockwise="true" responsive="false" duration="500" animation="easeInOutQuart" animation-delay="0">
-		    		<svg>
-		                <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-		                    <stop offset="5%"  stop-color="green"/>
-		                    <stop offset="95%" stop-color="gold"/>
-		                </linearGradient>
-	               	</svg>
-		    	</round-progress>
-		    </div>
-
-			<div class="row fileupload-buttonbar">
-			    <div class="col-lg-7">
-			        <!-- The fileinput-button span is used to style the file input field as button -->
-			        <button type="button" class="btn btn-warning cancel" ng-click="cancelUpload()">
-			            <i class="glyphicon glyphicon-ban-circle"></i>
-
-			            <span>Cancel</span>
-			        </button>
-			    </div>
-		    </div>
-		</div>
-
-    	<!-- This container is shown when upload starts -->
-	    <div ng-class="{showLoader: startUpload}" ng-show="startProc && !startUpload">
-	    	<h3>Processing file. Please wait...</h3>
-
-		    <!-- Processing progressbar container -->
-		    <div class="progress-wrapper">
-	            <div class="progress ng-cloak" ng-style="getStyle()">{{cTimer | time}}</div>
-
-		    	<round-progress max="100" current="cLoop" color="#45CCCE" bgcolor="#EAEAEA" radius="100" semi="false" rounded="true" stroke="10" clockwise="true" responsive="false" duration="500" animation="easeInOutQuart" animation-delay="0">
-		    		<svg>
-		                <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-		                    <stop offset="5%"  stop-color="green"/>
-		                    <stop offset="95%" stop-color="gold"/>
-		                </linearGradient>
-	               	</svg>
-		    	</round-progress>
-		    </div>
-		</div>
-	</div>
-</script>
